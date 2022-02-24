@@ -23,7 +23,7 @@
 - Success Response:
 
 	Code: 200  
-	Content: { id : 5, name : "Pizza", price : 1000 }
+	Content: [{ id : 5, name : "Pizza", price : 1000 }, { id : 6, name : "Hamburguer", price : 900 }]
 	
 - Error Response:
 

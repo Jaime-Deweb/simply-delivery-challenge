@@ -62,7 +62,7 @@ class ApiController extends AbstractController
             
             $data = $request->toArray();
             
-            if (empty($data['name']) || empty($data['price'])) {
+            if (empty($data['name']) && empty($data['price'])) {
                 throw new \Exception('Data no valid', 422);
             }
             
@@ -123,6 +123,8 @@ class ApiController extends AbstractController
             if (empty($data['properties'])) {
                 throw new \Exception('Data no valid', 422);
             }
+            
+            $item->getProperties()->clear();
             
             foreach ($data['properties'] as $propertyDesignation) {
                 $property = new ItemProperty();
