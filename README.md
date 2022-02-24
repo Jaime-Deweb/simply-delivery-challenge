@@ -22,12 +22,12 @@
 	
 - Success Response:
 
-	Code: 200
+	Code: 200  
 	Content: { id : 5, name : "Pizza", price : 1000 }
 	
 - Error Response:
 
-	Code: 401 UNAUTHORIZED
+	Code: 401 UNAUTHORIZED  
 	Content: { error : "No API key provided."|"Invalid credentials." }
 
 ## Add Item
@@ -50,22 +50,22 @@
 	
 	Required:
 
-	name=[string]
+	name=[string] 
 	price=[integer]
 	
 - Success Response:
 
-	Code: 200
+	Code: 200  
 	Content: { status : 200, success : "Item added successfully" }
 	
 - Error Response:
 
-	Code: 401 UNAUTHORIZED
+	Code: 401 UNAUTHORIZED  
 	Content: { error : "No API key provided."|"Invalid credentials." }
 
 	OR
 
-	Code: 422
+	Code: 422  
 	Content: { status => 422, errors => "Data no valid" }
 
 ## Update Item
@@ -82,29 +82,29 @@
 
 	Required:
 	
-	key=[string]
+	key=[string]  
 	id=[integer}	
 	
 - Data Params
 	
 	Required:
 
-	name=[string]
+	name=[string]  
 	price=[integer]
 	
 - Success Response:
 
-	Code: 200
+	Code: 200  
 	Content: { status : 200, success : "Item updated successfully" }
 	
 - Error Response:
 
-	Code: 401 UNAUTHORIZED
+	Code: 401 UNAUTHORIZED  
 	Content: { error : "No API key provided."|"Invalid credentials." }
 
 	OR
 	
-	Code: 422
+	Code: 422  
 	Content: { status => 422, errors => "Data no valid" }
 
 ## Delete Item
@@ -121,7 +121,7 @@
 
 	Required:
 	
-	key=[string]
+	key=[string]  
 	id=[integer}	
 	
 - Data Params
@@ -130,17 +130,17 @@
 	
 - Success Response:
 
-	Code: 200
+	Code: 200  
 	Content: { status : 200, success : "Item deleted successfully" }
 	
 - Error Response:
 
-	Code: 401 UNAUTHORIZED
+	Code: 401 UNAUTHORIZED  
 	Content: { error : "No API key provided."|"Invalid credentials." }
 
 OR
 
-	Code: 404
+	Code: 404  
 	Content: { status => 422, errors => "Item not found" }
 
 ## Add Properties to Item
@@ -157,7 +157,7 @@ OR
 
 	Required:
 	
-	key=[string]
+	key=[string]  
 	id=[integer] (Item ID)	
 	
 - Data Params
@@ -168,22 +168,22 @@ OR
 	
 - Success Response:
 
-	Code: 200
+	Code: 200  
 	Content: { status : 200, success : "The item properties were updated successfully" }
 	
 - Error Response:
 
-	Code: 401 UNAUTHORIZED
+	Code: 401 UNAUTHORIZED  
 	Content: { error : "No API key provided."|"Invalid credentials." }
 
 	OR
 
-	Code: 404
+	Code: 404  
 	Content: { status => 422, errors => "Item not found" }
 
 	OR
 
-	Code: 422
+	Code: 422  
 	Content: { status : 422, errors : "Data no valid" }
 
 - Notes:
