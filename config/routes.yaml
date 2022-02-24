@@ -1,3 +1,24 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+items_list:
+    path: /api/items
+    controller: App\Controller\ApiController::index
+    methods: GET
+    
+item_add:
+    path: /api/item
+    controller: App\Controller\ApiController::addItem
+    methods: POST  
+    
+item_edit:
+    path: /api/item/{id}
+    controller: App\Controller\ApiController::updateItem
+    methods: PUT
+    
+item_delete:
+    path: /api/item/{id}
+    controller: App\Controller\ApiController::deleteItem
+    methods: DELETE
+    
+item_properties_update:
+     path: /api/item/{id}/properties
+     controller: App\Controller\ApiController:updateItemProperties
+     methods: POST
